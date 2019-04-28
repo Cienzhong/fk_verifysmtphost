@@ -25,6 +25,17 @@ class VerifyEmail:
                 continue
         return valid_list
 
+    def wrong_demain(self):
+        # 存储有效的邮箱地址
+        wrong_list = []
+        for addr in self.email_addrs:
+            demain = self.get_demain(addr)
+            if len(demain) > 0 and self.is_existsMX(demain):
+                continue
+            else:
+                wrong_list.append(addr)
+        return wrong_list
+
     # 查找邮箱服务器MX记录
     def is_existsMX(self, demain):
         try:
