@@ -4,8 +4,8 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
-sender = 'seet521@126.com' #'chrisliu5616@hotmail.com'
-sender_pass = 'jyuken19860912' #'6834395lg'
+sender = '555555@126.com'
+sender_pass = '123456'
 receivers = '529781013@qq.com'
 
 def main():
